@@ -140,23 +140,29 @@ function cpclip() {
 ```
 ## Titre: Créer une archive tar.gz
 Une fonction pour créer une archive tar.gz à partir d'un répertoire.
-
+```
 function tarzip() {
     tar -czvf $1.tar.gz $1
 }
 
-Utilisation : `tarzip répertoire`Titre: Shortcuts pour la navigation dans les répertoires
+# Utilisation : `tarzip répertoire`Titre: Shortcuts pour la navigation dans les répertoires
+```
+
 
 ## Titre : Changer rapidement de répertoire
 Vous pouvez ajouter des fonctions pour changer rapidement de répertoire. Par exemple, pour aller au répertoire parent.
 
+```
 function ..() { cd ..; }
 
-Utilisation : ..
+# Utilisation : ..
+```
+
 
 ## Titre: Extraction d'archives
 Créez une fonction pour extraire divers types d'archives.
 
+```
 function extract() {
   if [ -f $1 ] ; then
       case $1 in
@@ -178,26 +184,32 @@ function extract() {
   fi
 }
 
-Utilisation : extract fichier.tar.gz
+# Utilisation : extract fichier.tar.gz
+```
 
 ## Titre: Affichage des fichiers cachés
 Une fonction pour afficher les fichiers cachés.
 
+```
 function lh() { 
     ls -lh .[^.]* 
 }
 
-## Utilisation : lh
-
+# Utilisation : lh
+```
 Titre: Créer un nouveau répertoire et y entrer
 Pour créer un nouveau répertoire et y entrer en une seule commande.
 
+```
 function mkcd() { 
     mkdir -p "$@" && cd "$_"; 
 }
 
 Créer un Fichier nommée “monBASHRC” avec comme contenu les commandes ci-dessous.
 Faites une fonction qui copie des commandes dans votre bashrc si ce n’est pas déjà fait. Apprenez à les utiliser, améliorez les et faites vos propres fonctions.
+```
+
+## Autres exemples de fonction 
 
 ```
 function ..() { cd ..; }
