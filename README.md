@@ -1,5 +1,7 @@
 # Automatisation et Durcissement d’un Système Debian avec Bash
 
+Objectif : choisir un projet d'infrastructure (réseaux, système, autre) à automatiser, tant qu'il répond aux critères de sécurité et de gestion d'un environnement Linux. 
+
 ## Introduction
 
 L'objectif de ce TP est de **sécuriser** et **automatiser** la configuration initiale d'un système Debian. 
@@ -12,18 +14,11 @@ N'oubliez pas d'**anticiper les erreurs** et de vérifier systématiquement que 
 
 Exemple : https://sbnsec.fr/linux.sh
 
-## Objectifs
+## Étapes de votre script
 
-- **Automatiser** la configuration initiale de la sécurité.
-- **Durcir** les configurations essentielles, comme SSH et les services.
-- **Personnaliser** l’environnement de travail pour le rendre plus adapté à vos usages.
-- **Proposer des idées** novatrices et utiles pour améliorer la sécurité et l’ergonomie de votre système.
+### 1. Automatiser la Copie de la Clé SSH (depuis votre PC vers votre VM)
 
-## Étapes du TP
-
-### 1. Copie de la Clé SSH
-
-Vous devrez automatiser la copie de votre clé SSH publique dans le fichier `~/.ssh/authorized_keys` de manière sécurisée. Assurez-vous de configurer les permissions du fichier de manière adéquate pour empêcher tout accès non autorisé.
+Vous devrez automatiser la copie de votre clé SSH publique `~/.ssh/id_rsa.pub` dans le fichier `~/.ssh/authorized_keys` de manière sécurisée. Assurez-vous de configurer les permissions du fichier de manière adéquate pour empêcher tout accès non autorisé.
 
 ### 2. Durcissement de SSH
 
@@ -40,7 +35,23 @@ Installez un pare-feu (UFW) et configurez-le pour permettre uniquement les conne
 - **Configurer les règles par défaut** pour bloquer tout le trafic entrant sauf les services essentiels.
 - **Autoriser** les connexions nécessaires, comme SSH ou les serveurs web si applicable.
 
-   ### 4. Propositions de Durcissement Simples
+### 4. Choix du projet
+
+Par exemple, un projet possible pourrait consister en :
+
+- L'installation de Docker pour la gestion de conteneurs, permettant le déploiement d’applications dans des environnements isolés,
+- La mise en place d'un WAF (ModSecurity) pour sécuriser les applications et protéger contre les attaques web courantes,
+- La configuration de certificats SSL (OpenSSL) pour chiffrer les connexions réseau,
+- Le déploiement d’un service de partage de fichiers tel que PsiTransfer pour un transfert de données sécurisé,
+- L'ajout de services de gestion comme OpenMediaVault, offrant un accès centralisé aux données.
+  
+Les étudiants peuvent librement choisir un projet d'infrastructure (réseaux, système, autre) à automatiser, tant qu'il répond aux critères de sécurité et de gestion d'un environnement Linux. 
+
+## Bonnus 
+
+### 4. Propositions de Durcissement Simples (Bonnus)
+
+Les étudiants devront utiliser bash pour automatiser chaque étape de leur projet, depuis la configuration SSH sécurisée jusqu’à l'installation et l'activation des services choisis. 
 
 Voici des propositions pour renforcer la sécurité de votre système. Chaque proposition doit être documentée avec précision pour que vous compreniez comment elle renforce la sécurité et dans quel contexte elle est applicable.
 
@@ -56,7 +67,7 @@ Voici des propositions pour renforcer la sécurité de votre système. Chaque pr
 - **Détection des Modifications dans les Fichiers Système**  
    Utilisez des outils comme `AIDE` ou `Tripwire` pour surveiller les fichiers critiques du système et être alerté en cas de modification non autorisée. Ces outils peuvent aider à identifier les intrusions et les altérations de fichiers.
 
-### 5. Personnalisation et Suggestions de Fonctionnalités
+### 5. Personnalisation et Suggestions de Fonctionnalités (bonnus)
 
 En plus de sécuriser votre système, l’objectif est de personnaliser votre environnement de travail pour le rendre plus efficace et agréable à utiliser. Voici quelques idées à implémenter :
 
@@ -69,8 +80,3 @@ En plus de sécuriser votre système, l’objectif est de personnaliser votre en
 - **Synchronisation Automatique de Répertoires** : Configurez des scripts pour synchroniser automatiquement vos dossiers de travail entre différentes machines à l'aide de `rsync`. Cela peut être utile si vous travaillez sur plusieurs environnements.
 
 - **Intégration de Notifications Système** : Intégrez des notifications système qui vous alertent lorsqu’une tâche longue est terminée (comme une compilation ou une sauvegarde). Cela vous permet de continuer à travailler sur autre chose sans avoir à vérifier constamment l’état de vos processus.
-
-### Suggestions d'Idées Supplémentaires
-
-Poussez encore plus loin la personnalisation et la sécurisation en réfléchissant à d’autres fonctionnalités ou scripts qui pourraient améliorer votre système. 
-Réfléchissez aux tâches que vous effectuez souvent, aux aspects de la sécurité que vous pourriez renforcer, ou aux améliorations que vous aimeriez avoir dans votre environnement de travail. Soyez créatifs !
