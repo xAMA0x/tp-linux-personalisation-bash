@@ -1,10 +1,6 @@
-Voici le format markdown du sujet pour le partiel :
+Vous devez créer un projet d’automatisation avec Ansible.
 
----
-
-# Partiel : Objectif du Projet
-
-Ce projet invite les étudiants à créer un projet d’automatisation avec Ansible.
+Vous devez  choisir librement un projet d'infrastructure (réseaux, système, ou autre) à automatiser, à condition qu'il respecte les critères de sécurité et de gestion d'un environnement Linux.
 
 ## Objectifs du Projet
 
@@ -14,7 +10,6 @@ Ce projet invite les étudiants à créer un projet d’automatisation avec Ansi
 - **👏 5 POINTS 👏**  
   Apprendre à déployer et automatiser pour garantir une configuration cohérente et rapide.
 
-Les étudiants peuvent choisir librement un projet d'infrastructure (réseaux, système, ou autre) à automatiser, à condition qu'il respecte les critères de sécurité et de gestion d'un environnement Linux.
 
 ### Exemples de Projets
 
