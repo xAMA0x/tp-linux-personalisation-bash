@@ -1,56 +1,15 @@
-# Grille de Notation pour le TP : Automatisation et Durcissement d’un Système Debian
-
-## Obligatoire (Total : 15 points)
-
-### 1. **Copie de la Clé SSH** (5 points)
-- Automatisation correcte et sécurisée de la copie de la clé SSH publique.
-- Gestion appropriée des permissions des fichiers.
-- Bonne gestion des erreurs en cas d’échec ou d’entrée utilisateur incorrecte.
-
-### 2. **Durcissement de SSH** (5 points)
-- Désactivation de l'authentification par mot de passe.
-- Limitation de l'accès SSH à des utilisateurs spécifiques.
-- Désactivation de l'accès root via SSH.
-- Utilisation d'une liste blanche d'adresses IP.
-
-### 3. **Installation et Configuration d’un Pare-feu (UFW)** (5 points)
-- Installation correcte de UFW.
-- Configuration des règles par défaut pour bloquer le trafic non autorisé.
-- Autorisation des connexions nécessaires (SSH, HTTP, HTTPS si applicable).
-- Gestion appropriée des erreurs et des permissions.
-
-## Au Choix (Total : 10 points - minimum un point à choisir)
-
-### 4. **Propositions de Durcissement Simples** (jusqu’à 10 points)
-- Mise en place de l'authentification à deux facteurs (2FA).
-- Mise à jour automatique des paquets de sécurité.
-- Désactivation des services inutiles.
-- Surveillance des fichiers critiques avec AIDE ou Tripwire.
-
-### 5. **Personnalisation et Suggestions de Fonctionnalités** (jusqu’à 10 points)
-- Création d'alias pour des commandes fréquentes.
-- Développement de scripts d'automatisation personnalisés.
-- Personnalisation du prompt Bash.
-- Synchronisation automatique des répertoires.
-- Intégration de notifications système.
-
-## Bonus (jusqu’à 5 points)
-
-### **Suggestions d'Idées Supplémentaires**
-- Implémentation d’idées créatives supplémentaires en lien avec la sécurité ou l’automatisation.
-- Innovations qui montrent une réflexion personnelle et avancée dans la personnalisation ou la sécurité du système.
-
-## Critères de Réussite
-
-- **Respect des bonnes pratiques** : clarté du code, commentaires, modularité avec le sourçage des fonctions.
-- **Gestion des erreurs** : traitement des erreurs d’exécution, gestion des entrées utilisateur.
-- **Originalité et innovation** : capacité à proposer des solutions originales et adaptées aux besoins des utilisateurs.
+# Modalités de Présentation
+- Durée : 10 minutes maximum par groupe de 2/3 personnes.
+- Supports visuels : Les slides ne sont pas obligatoires, mais les étudiants peuvent en utiliser s'ils le souhaitent.
+- Structure recommandée : Introduction, description de l’architecture, démonstration de l’automatisation, aspects sécurité, tests et conclusion.
+- Évaluation : Chaque groupe sera noté selon la grille de notation en fonction de la qualité de leur présentation orale et de la démonstration du projet.
   
 ## Barème Total
 
-| Critère                                   | Points Disponibles |
-| ----------------------------------------- | ------------------ |
-| Obligatoire (1, 2, 3)                     | 15                 |
-| Au choix (4, 5)                           | 10                 |
-| Bonus                                     | 5                  |
-| **Total**                                 | **30**             |
+| Catégorie                    | Critères                                                                                                                                                 | Points |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| **Architecture de l’Infrastructure** | - Présence d’un diagramme clair de l'architecture et bonne organisation des composants  <br> - Explication de l’architecture réseau, ports, et règles de pare-feu | 5      |
+| **Automatisation avec bash**      | - Explication des scripts et de leur structure  <br> - Utilisation efficace des rôles Ansible pour modulariser chaque composant  <br> - Cohérence et clarté des tâches automatisées | 5      |
+| **Aspects Sécurité**                | - Bonne gestion des accès SSH et mise en place de clés de sécurité  <br> - Protection adéquate de l'application avec firewall/WAF  <br> - Application et validation de certificats SSL  <br> - Sécurisation des fichiers et services (permissions, accès) | 5      |
+| **Démo**                             | - Présentation de l'automatisation du déploiement de l'infra sur une VM fournie par l'intervenant (Sébastien B.)  <br> *(4 VCPU, 8 GO RAM, 100 SSD, Debian 12, user root)* | 5      |
+| **Bonus**                            | - Vous arrivez à prouver que votre projet est utile <br> - Vous pouvez le réutiliser dans la vie courante ou il pourra être utile dans votre entreprise <br> - Vous avez ouvert (open sourcé) votre projet sur GitHub | 5     |
