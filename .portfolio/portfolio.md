@@ -38,7 +38,7 @@ architecture:
 
 # Diagrammes d'architecture (optionnel)
 diagrams:
-  - path: "https://raw.githubusercontent.com/xAMA0x/tp-linux-personalisation-bash/main/.portfolio/diagrams/linux-hardening-architecture.svg"
+  - path: "https://raw.githubusercontent.com/xAMA0x/tp-linux-personalisation-bash/main/.portfolio/diagrams/Mermaid Chart - Create complex, visual diagrams with text.-2025-11-02-190905.svg"
     title: "Architecture Bash (Flux de Hardening)"
     description: "Flux séquentiel du script d'automatisation pour le durcissement du système."
 
